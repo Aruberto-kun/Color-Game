@@ -48,7 +48,7 @@ const showPath = async (colors) => {
     // loop through each color in the array
     for (let color of colors) {
         const currentColor = document.querySelector(`.${color}`);
-        // pause execution for 500 milliseconds
+        // pause execution for 300 milliseconds
         await delay(300);
         // set background to new color
         currentColor.style.backgroundColor = colorObj[color].new;
