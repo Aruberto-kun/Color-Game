@@ -49,13 +49,13 @@ const showPath = async (colors) => {
     for (let color of colors) {
         const currentColor = document.querySelector(`.${color}`);
         // pause execution for 500 milliseconds
-        await delay(500);
+        await delay(300);
         // set background to new color
         currentColor.style.backgroundColor = colorObj[color].new;
-        await delay(600);
+        await delay(300);
         // set background to old color
         currentColor.style.backgroundColor = colorObj[color].current;
-        await delay(600);
+        await delay(300);
     }
     // set flag to indicate the game is no longer generating path
     isPathGenerating = false;
@@ -94,7 +94,7 @@ const handleColorClick = async (e) => {
     // if clicked color is correct, update score and continue generating the path
     if (e.target.classList.contains(randomColors[clickCount])) {
         e.target.style.backgroundColor = colorObj[randomColors[clickCount]].new;
-        await delay(500);
+        await delay(100);
         e.target.style.backgroundColor = colorObj[randomColors[clickCount]].current;
         clickCount++;
         if (clickCount === score) {
